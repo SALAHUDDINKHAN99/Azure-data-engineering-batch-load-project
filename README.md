@@ -106,6 +106,8 @@ We now extract data from MySQL OnPrem datasource and store it into the landing c
 - **ForEach Activity** - We use this activity to loop through each file present in the MySQL source location and perform the following:
   - Perform **COPY activity** and log the status of the copy activity into the success or failure log as per the activity result.
   - Then we add **IF activity** to compare the records between the source tables and the records inserted into the landing container.
+    - [IF Expression](https://github.com/SALAHUDDINKHAN99/Azure-data-engineering-batch-load-project/blob/main/Scripts/Sql%20to%20Landing%20Activity%20Code%20Snippets.ipynb)
+
   - If there's a mismatch between the records fetched and inserted then :
     - We Log the mismatch records status into the log table.
     - We use **Fail activity** to fail the pipline execution and end it.
