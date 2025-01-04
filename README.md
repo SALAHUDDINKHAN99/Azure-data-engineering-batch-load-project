@@ -39,10 +39,10 @@ This project implements a data engineering pipeline using **Azure Data Factory (
 - - - -
 
 
-## Linked Services
+## Linked Services:
 A linked service is a connection to a specific service or data store that can either be a source of data, or a destination (also called target or sink). In other words, it is much like connection strings, which define the connection information needed for the service to connect to external resources or data sources.
 
-#### In this project we have created:<br/>
+#### Required Linked Services (ls) for this project:<br/>
 **ls_mysql ->** To establish connection between ADF and MySQL data source.<br/>
 **ls_sftp ->** To establish connection between ADF and SFTP data source.<br/>
 **ls_adls ->** To establish connection between ADF and ADLS Gen2 storage account.<br/>
@@ -60,6 +60,26 @@ A linked service is a connection to a specific service or data store that can ei
 * Grant **Storage Blob Data Contributor** role to Data Factory from ADLS Gen2 storage account so that ADF can have permission to read, write, and manage data stored in Azure Data Lake Storage Gen2 containers.<br/>
 * Grant **Storage Blob Data Contributor** role to Access Connector(i.e. used to establish connection between Databricks and ADLS) from ADLS Gen2 storage account so that the Databricks can have permission to read, write and manage data stored in Azure Data Lake Storage Gen2 containers.<br/>
 
+- - - -
 
 
+## Datasets:
+Datasets in ADF serve as reference points or views of the actual data to be used in data integration activities. They provide the structure and metadata for the data within ADF. However, to populate a dataset with actual data, a connection to the corresponding data storage is required using a linked service.
+
+#### Required Datasets (ss) for this project:<br/>
+![](https://github.com/SALAHUDDINKHAN99/Azure-data-engineering-batch-load-project/blob/main/Images/Datasets.png)<br/>
+**ds_input_mysql ->** to point to the data present in MySQL data source.<br/>
+**ds_input_sftp ->** to point to the data present in SFTP data source.<br/>
+**ds_metadata_add_deltalake ->** to point to the data/metadata tables present in deltalake.<br/>
+**ds_output_csv ->** points to the landing container in ADLS(we pull SFTP data and store in CSV format in landing container).<br/>
+**ds_output_parquet->** points to the landing container in ADLS(we pull MySQL data and store in Parquet format in landing container).<br/>
+
+- - - -
+
+## Containers required in the storage account for the project:
+![](https://github.com/SALAHUDDINKHAN99/Azure-data-engineering-batch-load-project/blob/main/Images/StorageAccount.png)
+
+- - - -
+
+Pending!!!
 
