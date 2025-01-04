@@ -81,14 +81,17 @@ Datasets in ADF serve as reference points or views of the actual data to be used
 
 - - - -
 
+# I. Metadata Tables in Databricks
+Let,s now create the metadata tables so that we can pass the values into the ADF pipeline dynamically from databricks.<br/>
+=> [Metadata Table Creation Scripts](https://github.com/SALAHUDDINKHAN99/Azure-data-engineering-batch-load-project/blob/main/Scripts/METADATA%20Tables.ipynb)
+
+- - - -
+
+# II. Data Extraction:
+
+We now extract data from MySQL OnPrem datasource and store it into the landing container in ADLS in parquet format.Similarly we extract data from OnPrem SFTP source and store it in landiing container in CSV format.
+
 Pending!!!
-[Metadata Table Creation Scripts](https://github.com/SALAHUDDINKHAN99/Azure-data-engineering-batch-load-project/blob/main/Scripts/METADATA%20Tables.ipynb)
 
-
-# Azure Data Engineering Batch Load Project
-
-Here is how you can access the METADATA Tables script.
-
-Click [here](https://github.com/SALAHUDDINKHAN99/Azure-data-engineering-batch-load-project/blob/main/Scripts/METADATA%20Tables.ipynb) to view the `METADATA Tables` notebook.
 
 
