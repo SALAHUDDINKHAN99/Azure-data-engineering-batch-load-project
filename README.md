@@ -84,3 +84,11 @@ Datasets in ADF serve as reference points or views of the actual data to be used
 Pending!!!
 [Metadata Table Creation Scripts](https://github.com/SALAHUDDINKHAN99/Azure-data-engineering-batch-load-project/blob/main/Scripts/METADATA%20Tables.ipynb)
 
+
+# Azure Data Engineering Batch Load Project
+
+Here is how you can access the METADATA Tables script.
+
+Click [here](https://github.com/SALAHUDDINKHAN99/Azure-data-engineering-batch-load-project/blob/main/Scripts/METADATA%20Tables.ipynb) to view the `METADATA Tables` notebook.
+
+
