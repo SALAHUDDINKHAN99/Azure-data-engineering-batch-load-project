@@ -90,7 +90,7 @@ Datasets in ADF serve as reference points or views of the actual data to be used
 * Create Log tables in Databricks so that we can log dynamically the details of each activity performed in ADF.<br/>
 => [Log Table Creation Script](https://github.com/SALAHUDDINKHAN99/Azure-data-engineering-batch-load-project/blob/main/Scripts/log%20table%20creation.ipynb)
 
-* Log Files.<br/>
+* Archive Files.<br/>
 =>[Archive Files Script](https://github.com/SALAHUDDINKHAN99/Azure-data-engineering-batch-load-project/blob/main/Scripts/archive%20files%20scripts.ipynb)
 
 - - - -
