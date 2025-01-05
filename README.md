@@ -81,7 +81,7 @@ Datasets in ADF serve as reference points or views of the actual data to be used
 
 - - - -
 
-# I. Databricks
+# Databricks
 
 ### Metadata Tables in Databricks
 *  Create metadata tables in Databricks so that we can pass the values from the delta tables created into the ADF pipeline dynamically from databricks.<br/>
@@ -104,7 +104,7 @@ Datasets in ADF serve as reference points or views of the actual data to be used
 
 - - - -
 
-# II. Data Extraction Transfrmation & Loading into Landing,Bronze,Silver & Gold containers:
+# Data Extraction Transfrmation & Loading into Landing,Bronze,Silver & Gold containers:
 
 - We extract the data from MySQL OnPrem datasource and store it into the `landing container` in ADLS in parquet format. Similarly we extract data from OnPrem SFTP source and store it in `landing container` in CSV format aswell.<br/>
 - Data is then loaded into `Bronze layer` after checking the data quality and by removing the first rows if it matches the table headers.
