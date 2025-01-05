@@ -90,8 +90,17 @@ Datasets in ADF serve as reference points or views of the actual data to be used
 * Create Log tables in Databricks so that we can log dynamically the details of each activity performed in ADF.<br/>
 => [Log Table Creation Script](https://github.com/SALAHUDDINKHAN99/Azure-data-engineering-batch-load-project/blob/main/Scripts/log%20table%20creation.ipynb)
 
-* Archive Files.<br/>
+* Archive Files Script: Source files are archived once the data is moved into bronze layer from landing container.<br/>
 =>[Archive Files Script](https://github.com/SALAHUDDINKHAN99/Azure-data-engineering-batch-load-project/blob/main/Scripts/archive%20files%20scripts.ipynb)
+
+* Bronze Table:<br/>
+=> [Bronze Tables Creation Sript](https://github.com/SALAHUDDINKHAN99/Azure-data-engineering-batch-load-project/blob/main/Scripts/bronze_tables_creation_scripts.ipynb)
+
+* Silver Tables:<br/>
+=> [Silver Tables Creation Sript](https://github.com/SALAHUDDINKHAN99/Azure-data-engineering-batch-load-project/blob/main/Scripts/silver_tables_creation_scripts.ipynb)
+
+* Gold Tables:<br/>
+=> [Gold Tables Creation Sript](https://github.com/SALAHUDDINKHAN99/Azure-data-engineering-batch-load-project/blob/main/Scripts/gold_tables_creation_scripts.ipynb)
 
 - - - -
 
@@ -99,6 +108,8 @@ Datasets in ADF serve as reference points or views of the actual data to be used
 
 - We extract the data from MySQL OnPrem datasource and store it into the `landing container` in ADLS in parquet format. Similarly we extract data from OnPrem SFTP source and store it in `landing container` in CSV format aswell.<br/>
 - Data is then loaded into `Bronze layer` after checking the data quality and by removing the first rows if it matches the table headers.
+- Data is then loaded into `Silver layer` after cleaning the data and enforcing the correct schema.
+- Data is then loaded into `Gold layer` after De-normalizing the data wherever it is possible to enhance the performance while the data is being queried for extracting business insights by avoiding joins.
 - Refer [this document](https://github.com/SALAHUDDINKHAN99/Azure-data-engineering-batch-load-project/blob/main/Pipline%20Execution%20Detailed%20Explaination/Project%20Over%20Flow%20in%20Detail.ipynb) for detailed explaination.
 
 Pending!!!
