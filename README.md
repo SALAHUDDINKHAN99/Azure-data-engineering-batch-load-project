@@ -94,8 +94,8 @@ Datasets in ADF serve as reference points or views of the actual data to be used
 
 # II. Data Extraction:
 
-We now extract data from MySQL OnPrem datasource and store it into the landing container in ADLS in parquet format.
-Similarly we extract data from OnPrem SFTP source and store it in landiing container in CSV format.<br/>
+We extract the data from MySQL OnPrem datasource and store it into the landing container in ADLS in parquet format.
+Similarly we extract data from OnPrem SFTP source and store it in landing container in CSV format aswell.<br/>
 Refer [this document](https://github.com/SALAHUDDINKHAN99/Azure-data-engineering-batch-load-project/blob/main/Pipline%20Execution%20Detailed%20Explaination/Project%20Over%20Flow%20in%20Detail.ipynb) for detailed explaination.
 
 Pending!!!
