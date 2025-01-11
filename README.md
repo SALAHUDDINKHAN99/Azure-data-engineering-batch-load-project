@@ -112,7 +112,4 @@ Datasets in ADF serve as reference points or views of the actual data to be used
 - Data is then loaded into `Gold layer` after De-normalizing the data wherever it is possible to enhance the performance while the data is being queried for extracting business insights by avoiding joins.
 - Refer [this document](https://github.com/SALAHUDDINKHAN99/Azure-data-engineering-batch-load-project/blob/main/Pipline%20Execution%20Detailed%20Explaination/Project%20Over%20Flow%20in%20Detail.ipynb) for detailed explaination.
 
-Pending!!!
-
-
 
