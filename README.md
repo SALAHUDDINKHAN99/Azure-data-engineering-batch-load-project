@@ -66,7 +66,7 @@ A linked service is a connection to a specific service or data store that can ei
 ## Datasets:
 Datasets in ADF serve as reference points or views of the actual data to be used in data integration activities. They provide the structure and metadata for the data within ADF. However, to populate a dataset with actual data, a connection to the corresponding data storage is required using a linked service.
 
-#### Required Datasets (ss) for this project:<br/>
+#### Required Datasets (ds) for this project:<br/>
 ![](https://github.com/SALAHUDDINKHAN99/Azure-data-engineering-batch-load-project/blob/main/Images/Datasets.png)<br/>
 **ds_input_mysql ->** to point to the data present in MySQL data source.<br/>
 **ds_input_sftp ->** to point to the data present in SFTP data source.<br/>
