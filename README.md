@@ -84,23 +84,12 @@ Datasets in ADF serve as reference points or views of the actual data to be used
 # Databricks
 
 ### Metadata Tables in Databricks
-*  Create metadata tables in Databricks so that we can pass the values from the delta tables created into the ADF pipeline dynamically from databricks.<br/>
-=> [Metadata Table Creation Script](https://github.com/SALAHUDDINKHAN99/Azure-data-engineering-batch-load-project/blob/main/Scripts/METADATA%20Tables.ipynb)
-
-* Create Log tables in Databricks so that we can log dynamically the details of each activity performed in ADF.<br/>
-=> [Log Table Creation Script](https://github.com/SALAHUDDINKHAN99/Azure-data-engineering-batch-load-project/blob/main/Scripts/log%20table%20creation.ipynb)
-
-* Archive Files Script: Source files are archived once the data is moved into bronze layer from landing container.<br/>
-=>[Archive Files Script](https://github.com/SALAHUDDINKHAN99/Azure-data-engineering-batch-load-project/blob/main/Scripts/archive%20files%20scripts.ipynb)
-
-* Bronze Table:<br/>
-=> [Bronze Tables Creation Sript](https://github.com/SALAHUDDINKHAN99/Azure-data-engineering-batch-load-project/blob/main/Scripts/bronze_tables_creation_scripts.ipynb)
-
-* Silver Tables:<br/>
-=> [Silver Tables Creation Sript](https://github.com/SALAHUDDINKHAN99/Azure-data-engineering-batch-load-project/blob/main/Scripts/silver_tables_creation_scripts.ipynb)
-
-* Gold Tables:<br/>
-=> [Gold Tables Creation Sript](https://github.com/SALAHUDDINKHAN99/Azure-data-engineering-batch-load-project/blob/main/Scripts/gold_tables_creation_scripts.ipynb)
+- **[Metadata Table Creation Script](https://github.com/SALAHUDDINKHAN99/Azure-data-engineering-batch-load-project/blob/main/Scripts/METADATA%20Tables.ipynb):** Create metadata tables in Databricks so that we can pass the values from the delta tables created into the ADF pipeline dynamically from databricks.<br/>
+- **[Log Table Creation Script](https://github.com/SALAHUDDINKHAN99/Azure-data-engineering-batch-load-project/blob/main/Scripts/log%20table%20creation.ipynb):** Create Log tables in Databricks so that we can log dynamically the details of each activity performed in ADF.<br/>
+- **[Archive Files Script](https://github.com/SALAHUDDINKHAN99/Azure-data-engineering-batch-load-project/blob/main/Scripts/archive%20files%20scripts.ipynb):** Source files are archived once the data is moved into bronze layer from landing container.<br/>
+- **[Bronze Tables Creation Sript](https://github.com/SALAHUDDINKHAN99/Azure-data-engineering-batch-load-project/blob/main/Scripts/bronze_tables_creation_scripts.ipynb)** <br/>
+- **[Silver Tables Creation Sript](https://github.com/SALAHUDDINKHAN99/Azure-data-engineering-batch-load-project/blob/main/Scripts/silver_tables_creation_scripts.ipynb)** <br/>
+- **[Gold Tables Creation Sript](https://github.com/SALAHUDDINKHAN99/Azure-data-engineering-batch-load-project/blob/main/Scripts/gold_tables_creation_scripts.ipynb)** <br/>
 
 - - - -
 
@@ -112,4 +101,12 @@ Datasets in ADF serve as reference points or views of the actual data to be used
 - Data is then loaded into `Gold layer` after De-normalizing the data wherever it is possible to enhance the performance while the data is being queried for extracting business insights by avoiding joins.
 - Refer [this document](https://github.com/SALAHUDDINKHAN99/Azure-data-engineering-batch-load-project/blob/main/Pipline%20Execution%20Detailed%20Explaination/Project%20Over%20Flow%20in%20Detail.ipynb) for detailed explaination.
 
+---
 
+## 🌟 About Me
+
+Hi there! I'm **Salahuddin Khan**, I’m an Azure Data Engineer with 2+ years of expertise in designing, developing, and optimizing data 
+pipelines on Microsoft Azure.
+
+Let's stay in touch! Feel free to connect with me:<br/><br/>
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/salahuddinkhan99)
