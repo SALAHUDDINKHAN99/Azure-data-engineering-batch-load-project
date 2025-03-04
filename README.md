@@ -83,7 +83,7 @@ Datasets in ADF serve as reference points or views of the actual data to be used
 
 # Databricks
 
-### Metadata Tables in Databricks
+#### Here are the creation scripts for various tables and processes within Databricks, including metadata tables, log tables, and bronze, silver, and gold tables, along with an archive files script for managing data flow.
 - **[Metadata Table Creation Script](https://github.com/SALAHUDDINKHAN99/Azure-data-engineering-batch-load-project/blob/main/Scripts/METADATA%20Tables.ipynb):** Create metadata tables in Databricks so that we can pass the values from the delta tables created into the ADF pipeline dynamically from databricks.<br/>
 - **[Log Table Creation Script](https://github.com/SALAHUDDINKHAN99/Azure-data-engineering-batch-load-project/blob/main/Scripts/log%20table%20creation.ipynb):** Create Log tables in Databricks so that we can log dynamically the details of each activity performed in ADF.<br/>
 - **[Archive Files Script](https://github.com/SALAHUDDINKHAN99/Azure-data-engineering-batch-load-project/blob/main/Scripts/archive%20files%20scripts.ipynb):** Source files are archived once the data is moved into bronze layer from landing container.<br/>
