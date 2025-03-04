@@ -84,7 +84,7 @@ Datasets in ADF serve as reference points or views of the actual data to be used
 
 - - - -
 
-# Databricks
+## Databricks
 
 #### Here are the creation scripts for various tables and processes within Databricks, including metadata tables, log tables, and bronze, silver, and gold tables, along with an archive files script for managing data flow.
 - **[Metadata Table Creation Script](https://github.com/SALAHUDDINKHAN99/Azure-data-engineering-batch-load-project/blob/main/Scripts/METADATA%20Tables.ipynb):** Create metadata tables in Databricks so that we can pass the values from the delta tables created into the ADF pipeline dynamically from databricks.<br/>
@@ -95,10 +95,11 @@ Datasets in ADF serve as reference points or views of the actual data to be used
 - **[Gold Tables Creation Sript](https://github.com/SALAHUDDINKHAN99/Azure-data-engineering-batch-load-project/blob/main/Scripts/gold_tables_creation_scripts.ipynb)** <br/>
 
 - - - -
+# ⌛Execution:
 
-# Data Extraction Transfrmation & Loading into Landing,Bronze,Silver & Gold containers:
+## ETL - Extraction, Transformation & Loading of Data across Landing,Bronze,Silver & Gold layers:
 
-- We extract the data from MySQL OnPrem datasource and store it into the `landing container` in ADLS in parquet format. Similarly we extract data from OnPrem SFTP source and store it in `landing container` in CSV format aswell.<br/>
+- Data is extrated from `MySQL` OnPrem datasource and stored into the `landing container` in Azure Data Lake in parquet format. Similarly data is extrated from OnPrem `SFTP` source and store it in `landing container` in CSV format aswell.<br/>
 - Data is then loaded into `Bronze layer` after checking the data quality and by removing the first rows if it matches the table headers.
 - Data is then loaded into `Silver layer` after cleaning the data and enforcing the correct schema.
 - Data is then loaded into `Gold layer` after De-normalizing the data wherever it is possible to enhance the performance while the data is being queried for extracting business insights by avoiding joins.
