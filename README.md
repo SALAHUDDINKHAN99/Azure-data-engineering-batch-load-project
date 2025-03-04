@@ -1,23 +1,23 @@
 # Azure Data Engineering Project: Azure Data Factory + Databricks + Medallion Architecture
 - - - -
-## Project Overview:
+# 📖Overview:
 This project implements a data engineering pipeline using **Azure Data Factory (ADF)**, **Azure Databricks** and supporting Azure resources.The pipeline extracts data from on-premises MySQL and SFTP, dynamically loads it into Azure Data Lake Storage Gen2 (ADLS Gen2), and processes it through a Medallion Architecture to transform raw data into business-ready insights.
 
 - - - -
 
-## Architecture
+# 🏗️Architecture
+This project follows Medallion Architecture **Landing**, **Bronze**, **Silver**, and **Gold** layers:
 
 ![](https://github.com/SALAHUDDINKHAN99/Azure-data-engineering-batch-load-project/blob/main/Images/Project%20Architecture.png)
 
-* The project follows the Medallion Architecture:
-  * **Landing** (Raw Data): Data extracted from on-premises MySQL and SFTP. 
-  * **Bronze** (Staging): Raw data with minimal transformations.
-  * **Silver** (Cleaned Data): Data cleaned, normalized, and validated.
-  * **Gold** (Aggregated Data): Data transformed into business-ready insights.
+  * **Landing:** Stores raw data exactly as received from source systems. Data is extracted from on-premises MySQL and SFTP sources.
+  * **Bronze** (Staging): Stores raw data with minimal transformations.
+  * **Silver** (Cleaned Data): Data is cleaned, normalized, and validated.
+  * **Gold** (Aggregated Data): Contains refined data transformed into business-ready insights.
 * The pipeline extracts data from on-premises sources like **MySQL** and **SFTP** and dynamically loads it into **Azure Data Lake Storage Gen2 (ADLS Gen2)**.
-* It uses **Azure Key Vault** to store secrets and credentials.
-* It implements **Azure Logic Apps** for automated email notifications regarding pipeline statuses.
-* The pipeline leverages **Azure Databricks** for logging, transformations and dynamically passing of parameters.
+* Use **Azure Key Vault** to store secrets and credentials.
+* Use **Azure Logic Apps** for automated email notifications regarding pipeline statuses.
+* Use **Azure Databricks** for logging, transformations and dynamically passing of parameters.
 
 - - - -
 
@@ -38,6 +38,8 @@ This project implements a data engineering pipeline using **Azure Data Factory (
 
 - - - -
 
+# 🚀Requirements:
+
 
 ## Linked Services:
 A linked service is a connection to a specific service or data store that can either be a source of data, or a destination (also called target or sink). In other words, it is much like connection strings, which define the connection information needed for the service to connect to external resources or data sources.
@@ -49,16 +51,6 @@ A linked service is a connection to a specific service or data store that can ei
 **ls_databricks_compute ->** To establish connection between ADF and Azure Databricks.<br/>
 **ls_databricks_delta ->** To establish connection between ADF and Delta Tables stored in Datalake.<br/>
 **ls_keyvault ->** To establish connection between ADF and Azure Key Vault to access the secrets stored in it.<br/>
-
-- - - -
-
-### Authenticaton Methods for connecting between different Azure cloud services and Granting of Roles:
-
-![](https://github.com/SALAHUDDINKHAN99/Azure-data-engineering-batch-load-project/blob/main/Images/Linked%20Services%20and%20Authentication%20Types%20inside%20Azure%20Cloud.jpg)
-
-* Grant **Contributor** role to Data Factory from Databricks because this role allows Azure Data Factory to have comprehensive management permissions including creating, updating, and managing data pipelines that interact with Databricks workspaces.<br/>
-* Grant **Storage Blob Data Contributor** role to Data Factory from ADLS Gen2 storage account so that ADF can have permission to read, write, and manage data stored in Azure Data Lake Storage Gen2 containers.<br/>
-* Grant **Storage Blob Data Contributor** role to Access Connector(i.e. used to establish connection between Databricks and ADLS) from ADLS Gen2 storage account so that the Databricks can have permission to read, write and manage data stored in Azure Data Lake Storage Gen2 containers.<br/>
 
 - - - -
 
@@ -76,8 +68,19 @@ Datasets in ADF serve as reference points or views of the actual data to be used
 
 - - - -
 
+
 ## Containers required in the storage account for the project:
 ![](https://github.com/SALAHUDDINKHAN99/Azure-data-engineering-batch-load-project/blob/main/Images/StorageAccount.png)
+
+- - - -
+
+### Authenticaton Methods for connecting between different Azure cloud services and Granting of Roles:
+
+![](https://github.com/SALAHUDDINKHAN99/Azure-data-engineering-batch-load-project/blob/main/Images/Linked%20Services%20and%20Authentication%20Types%20inside%20Azure%20Cloud.jpg)
+
+* Grant **Contributor** role to Data Factory from Databricks because this role allows Azure Data Factory to have comprehensive management permissions including creating, updating, and managing data pipelines that interact with Databricks workspaces.<br/>
+* Grant **Storage Blob Data Contributor** role to Data Factory from ADLS Gen2 storage account so that ADF can have permission to read, write, and manage data stored in Azure Data Lake Storage Gen2 containers.<br/>
+* Grant **Storage Blob Data Contributor** role to Access Connector(i.e. used to establish connection between Databricks and ADLS) from ADLS Gen2 storage account so that the Databricks can have permission to read, write and manage data stored in Azure Data Lake Storage Gen2 containers.<br/>
 
 - - - -
 
